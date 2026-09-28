@@ -1,0 +1,163 @@
+/* Globale Stile & Hintergrund */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+/* Haupt-Container zentrieren */
+.page-container {
+  width: 100%;
+  max-width: 650px;
+  margin: 20px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Header & Dropdown */
+.app-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #2d3748;
+}
+
+.category-select {
+  margin-bottom: 25px;
+}
+
+.category-select select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Fragetext */
+.question-text {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  line-height: 1.4;
+  color: #1a202c;
+}
+
+/* Antwort-Buttons Grid (Responsive) */
+.answers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 480px) {
+  .answers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Button-Styling */
+.answer-btn {
+  background-color: #f7fafc;
+  border: 2px solid #e2e8f0;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.answer-btn:hover:not(:disabled) {
+  background-color: #edf2f7;
+  border-color: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+.answer-btn:disabled {
+  cursor: default;
+}
+
+/* Status-Farben bei Auswahl */
+.answer-btn.selected-correct {
+  background-color: #48bb78 !important;
+  color: white !important;
+  border-color: #38a169 !important;
+}
+
+.answer-btn.selected-incorrect {
+  background-color: #f56565 !important;
+  color: white !important;
+  border-color: #e53e3e !important;
+}
+
+.answer-btn.show-correct {
+  background-color: #c6f6d5 !important;
+  border-color: #38a169 !important;
+  color: #22543d !important;
+}
+
+/* Feedback-Meldungen */
+.feedback {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.feedback.correct {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.feedback.incorrect {
+  background-color: #fed7d7;
+  color: #742a2a;
+}
+
+/* Buttons allgemein */
+.primary-btn {
+  margin-top: 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #5a67d8;
+}
+
+.loader {
+  font-size: 1.1rem;
+  color: #718096;
+  padding: 30px 0;
+}
